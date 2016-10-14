@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.homepage                  = "http://jamespmcgrath.com/projects/shortener"
   s.rubyforge_project         = "shortener"
   s.required_rubygems_version = "> 1.3.6"
-  # s.add_dependency 'rails', '~> 4.2.2'
+  # s.add_dependency 'rails', '>= 4.2.2'
   # s.add_dependency "rails", ">= 3.0.7"
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails", '~> 3.3.0'
