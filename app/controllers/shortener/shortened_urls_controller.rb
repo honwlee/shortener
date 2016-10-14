@@ -26,4 +26,18 @@ class Shortener::ShortenedUrlsController < ActionController::Base
     end
   end
 
+  def download
+    token = /^([#{Shortener.key_chars.join}]*).*/.match(params[:id])[1]
+
+    # pull the link out of the db
+    sl = ::Shortener::ShortenedUrl.find_by_unique_key(token)
+    if sl
+      sl.url
+      send_file(
+        File.join(tmp_path,name),
+        filename: name,
+        type: "application/zip",
+      )
+    end
+  end
 end

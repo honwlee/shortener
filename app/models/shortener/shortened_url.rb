@@ -34,11 +34,11 @@ class Shortener::ShortenedUrl < ActiveRecord::Base
 
   # return shortened url on success, nil on failure
   def self.generate(orig_url, owner=nil)
-    begin
+    # begin
       generate!(orig_url, owner)
-    rescue
-      nil
-    end
+    # rescue
+      # nil
+    # end
   end
 
   private
